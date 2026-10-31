@@ -1,0 +1,15 @@
+{
+  "name": "cpm-market",
+  "version": "1.0.0",
+  "description": "Car Parking Multiplayer (CPM) xavfsiz savdo va escrow platformasi",
+  "scripts": {
+    "start": "node --use-system-ca backend/src/server.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "seed": "cd backend && npm run seed"
+  },
+  "keywords": ["cpm", "telegram-bot", "escrow", "marketplace", "car-parking-multiplayer"],
+  "author": "CPM Market Team",
+  "license": "MIT"
+}

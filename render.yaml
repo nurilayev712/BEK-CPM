@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: cpm-market
+    env: node
+    plan: free
+    region: frankfurt
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && npm install"
+    startCommand: "node --use-system-ca backend/src/server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_DEFAULT_USER
+        value: admin
+      - key: ADMIN_DEFAULT_PASS
+        value: admin123
+      - key: BOT_TOKEN
+        sync: false
